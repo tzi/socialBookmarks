@@ -27,9 +27,9 @@ function ajax(a,b){var c="XMLHttpRequest"in window?new XMLHttpRequest():new Acti
 	if (a && b && c) { // checks if links are in the DOM
 		ajax("count.php?url=" + b.href.split("?u=")[1], function() {
 			h = JSON.parse(this);
-			H(a,h.tweet + " tweets");
-			H(b,h.facebook + " shares");
-			H(c,h.gplus + " G+1");
+			H(a,h.tweet + " Tweet");
+			H(b,h.facebook + " Share");
+			H(c,h.gplus + " GPlus");
 		 });
 		d(a);
 		d(b, 640, 280); // custom size for Facebook's sharer.php
