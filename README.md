@@ -7,9 +7,11 @@
 ### HTML
 
 ```html
-<a href="http://twitter.com/?status={Title} {Link} via {@username}">Tweet</a>
-<a href="http://www.facebook.com/sharer/sharer.php?u={Link}">Share</a>
-<a href="https://plusone.google.com/_/+1/confirm?url={Link}">+1</a>
+<nav id="share">
+  <a href="http://twitter.com/?status={Title} {Link} via {@username}">Tweet</a>
+  <a href="http://www.facebook.com/sharer/sharer.php?u={Link}">Share</a>
+  <a href="https://plusone.google.com/_/+1/confirm?url={Link}">+1</a>
+</nav>
 ```
 ### JavaScript
 
@@ -19,7 +21,7 @@ document.socialBookmarks(container)
 
 ### Arguments 
 
-* `container` : (`Element`) Links container
+* `container` : (`Element`) Links container (`nav#share` in the example)
 
 ### Note
 
