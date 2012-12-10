@@ -1,6 +1,6 @@
 /*
-	Social Bookmarks
-	mlb.li
+  Social Bookmarks
+  mlb.li
 */
 
 ;(function(window, document){
