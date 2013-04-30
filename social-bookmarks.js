@@ -11,18 +11,27 @@
     , clickEvent = "createTouch" in document ? "touchend" : "click"
 
   function socialBookmarks(container){
-    var links = container.getElementsByTagName("a")
-      , length = links.length
-    for(;length--;) {
-      ;(function(item){
-        item[eventListener](prefix + clickEvent, function(event){
-          event = event || window.event
-          if("preventDefault" in event) event.preventDefault()
-          else event.returnValue = false
+    if (container) {
+      if (container.nodeType) {
+        var links = container.getElementsByTagName("a")
+          , length = links.length
+        for(;length--;) {
+          ;(function(item){
+            item[eventListener](prefix + clickEvent, function(event){
+              event = event || window.event
+              if("preventDefault" in event) event.preventDefault()
+              else event.returnValue = false
 
-          window.open(item.href, "", "width=640, height=280")
-        })
-      })(links[length])
+              window.open(item.href, "", "width=640, height=280")
+            })
+          })(links[length])
+        }
+      } else if (container.length) {
+        var length = container.length;
+        for(;length--;) {
+          socialBookmarks(container[length]);
+        }
+      }
     }
   }
 
