@@ -13,19 +13,16 @@
   <a href="https://plusone.google.com/_/+1/confirm?url={Link}">+1</a>
 </nav>
 ```
+
 ### JavaScript
 
 ```js
+// Query the container element(s) the way you want 
+var container = document.getElementById('share')
 document.socialBookmarks(container)
 ```
 
-### Arguments 
-
-* `container` : (`Element`) Links container (`nav#share` in the example)
-
-### Note
-
-You should wait for the DOM to be ready
+Note: You should wait for the DOM to be ready
 
 ## MIT License
 Copyright (c) 2012, Matthias Le Brun
